@@ -21,7 +21,7 @@ LABEL org.opencontainers.image.source="https://github.com/karolina417/pawcho6"
 
 COPY --from=builder /app/myapp /usr/local/bin/myapp
 
-COPY --from=builder default.conf /etc/nginx/conf.d/default.conf
+COPY --from=builder /app/default.conf /etc/nginx/conf.d/default.conf
 
 RUN apk add --no-cache curl
 
